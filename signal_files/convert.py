@@ -1,4 +1,5 @@
 # Converts any mp3 file into a wav file to work with python naitively
+# requires ffmpeg to be installed
 from os import path
 from pydub import AudioSegment
 

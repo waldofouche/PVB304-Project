@@ -53,7 +53,7 @@ class SignalProc(Frame):
     # Loads Signal
     def load_signals(self):
 
-        # Doesn't work 
+        # Selects file from storage
         filename = filedialog.askopenfilename(filetypes = (("signal files", "*.wav;*.mp3")
                                                              ,("All files", "*.*") ))
          # read audio samples 
