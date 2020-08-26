@@ -1,6 +1,6 @@
 # PVB304 Project
 
-Signal Analysis Software built ojn python utilizing AI
+Signal Analysis Software built on python utilizing AI
 
 ## Installation
 
