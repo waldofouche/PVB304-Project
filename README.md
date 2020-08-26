@@ -20,4 +20,4 @@ pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
