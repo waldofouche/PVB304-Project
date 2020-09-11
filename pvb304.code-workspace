@@ -5,6 +5,6 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "/Users/waldofouche/opt/anaconda3/bin/python"
+		"python.pythonPath": "C:\\anaconda\\envs\\tensorflow_env\\python.exe"
 	}
 }
