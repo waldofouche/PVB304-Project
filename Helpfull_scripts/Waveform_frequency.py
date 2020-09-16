@@ -1,20 +1,21 @@
 import wave
 import numpy as np
 import matplotlib.pyplot as plt
+from tkinter import filedialog
 
-signal_wave = wave.open('signal_files\wav\LTEsample.wav', 'r')
-sample_rate = 160000
+# Selects file from storage\
+filename = filedialog.askopenfilename(filetypes = (("signal files", "*.wav;*.mp3")
+                                                             ,("All files", "*.*") ))
+# read audio samples 
+# input_data = read(filename)
+# audio = input_data[1]
+
+signal_wave = wave.open(filename)
+sample_rate = 16000
 sig = np.frombuffer(signal_wave.readframes(sample_rate), dtype=np.int16)
-# For the whole segment of the wave file
+
 sig = sig[:]
 
-# For partial segment of the wave file
-#sig = sig[25000:32000]
-
-# Separating stereo channels
-#left, right = data[0::2], data[1::2]
-
-# Plot the waveform (plot_a) and the frequency spectrum (plot_b)
 plt.figure(1)
 
 plot_a = plt.subplot(211)
