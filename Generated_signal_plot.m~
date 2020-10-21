@@ -4,24 +4,19 @@ load(file);
 
 % Grab information from file
 waveform = waveStruct.waveform;
-Fs = waveStruct.Fs;
-[s,w,t] = spectrogram(waveform);
+s 
+spectrogram(waveform,'yaxis')
+view(-45,65)
+colormap gray
+title('5G Signal Spectrogram')
 
-% plot(s(1),w);
-
-surf(s)
-
-% spectrogram(waveform,'yaxis')
-% % view(-45,65)
-% colormap gray
-% title('5G Signal Spectrogram')
 
 % Time Scope
-% timeScope = dsp.TimeScope('SampleRate', Fs, ...
-%     'TimeSpanOverrunAction', 'Scroll', ...
-%     'TimeSpan', 20.8125e-06);
-% timeScope(waveform);
-% release(timeScope)
+timeScope = dsp.TimeScope('SampleRate', Fs, ...
+    'TimeSpanOverrunAction', 'Scroll', ...
+    'TimeSpan', 20.8125e-06);
+timeScope(waveform);
+release(timeScope)
 % 
 % 
 % Spectrum Analyzer
@@ -31,10 +26,6 @@ surf(s)
 % 
 % % FFT
 % y = fft(waveform);
-% spectrogram(y,'yaxis')
-% view(-45,65)
-% colormap gray
-% title('5G Signal FFT Spectrogram')
 % 
 % plot(y)
 % 
