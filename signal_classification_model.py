@@ -20,7 +20,7 @@ test_labels =
 class_names = ['5G', '4G LTE', '3G', '2G']
 
 # Pre Processing of Signal Data --> Eventually handled Externally
-
+# FFT
 
 
 
@@ -40,10 +40,10 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 # Train Model -> num epochs is the number of generations
-model.fit(train_images, train_labels, epochs=10)
+model.fit(train_signals, train_labels, epochs=10)
 
 # Determines Accuracy of Model
-test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
+test_loss, test_acc = model.evaluate(test_signals,  test_labels, verbose=2)
 
 # Prints accuracy to screen
 print('\nTest accuracy:', test_acc)
