@@ -9,15 +9,15 @@ Fs = waveStruct.Fs;
 
 figure("Visible",true)
 spectrogram(waveform);
-shading interp;
+%shading interp;
 %view(-45,65)
 %colormap bone
-%title('5G Signal Spectrogram')
+title('5G Signal Spectrogram')
 % Removes axis and colorbar
 %set(gca, 'Visible', 'off');
 %colorbar('off');
 
-c = parula * 255
+% c = parula * 255
 % 
 % %.Mat to .Wav might be usefull
 % % https://www.mathworks.com/matlabcentral/answers/306487-convert-mat-files-to-wav
